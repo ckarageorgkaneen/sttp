@@ -1,0 +1,34 @@
+{
+    "transitions": [
+        {
+            "trigger": "EVT_AB",
+            "source": "A",
+            "dest": "B"
+        },
+        {
+            "trigger": "(after 1 sec.)",
+            "source": "A",
+            "dest": "C"
+        },
+        {
+            "trigger": "EVT_C",
+            "source": "B",
+            "dest": "C"
+        },
+        {
+            "trigger": "EVT_BA",
+            "source": "B",
+            "dest": "A"
+        },
+        {
+            "trigger": "EVT_A",
+            "source": "C",
+            "dest": "A"
+        },
+        {
+            "trigger": "if sun.is_up()",
+            "source": "C",
+            "dest": "B"
+        }
+    ]
+}

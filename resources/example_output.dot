@@ -1,0 +1,20 @@
+digraph {
+	A
+	B
+	A -> B [label=EVT_AB]
+	A
+	C
+	A -> C [label="(after 1 sec.)"]
+	B
+	C
+	B -> C [label=EVT_C]
+	B
+	A
+	B -> A [label=EVT_BA]
+	C
+	A
+	C -> A [label=EVT_A]
+	C
+	B
+	C -> B [label="if sun.is_up()"]
+}

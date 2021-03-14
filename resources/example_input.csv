@@ -1,0 +1,7 @@
+SOURCE,DEST,TRIGGER
+A,B,_AB
+,C,__1
+B,C,
+,A,_BA
+C,A,
+,B,if sun.is_up()
