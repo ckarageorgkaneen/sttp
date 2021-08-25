@@ -171,6 +171,13 @@ class STTP:
         self._validate_stt(stt)
         return stt
 
+    def dictify(self):
+        """Return a dictionary representation of the state machine."""
+        d = {}
+        for t in self._stt:
+            d.setdefault(t['source'], {})[t['dest']] = t['trigger']
+        return d
+
     @subcommand
     def jsonify(self):
         """Print the json representation of the state machine."""
