@@ -197,7 +197,8 @@ class STTP:
             view (boolean): automatically open the resulting file
                 (default: False)
         """
-        self._dot.render(filename, format=format, view=view, cleanup=True)
+        self._dot.render(filename.strip('.pdf'), format=format,
+                         view=view, cleanup=True)
 
 
 if __name__ == '__main__':
